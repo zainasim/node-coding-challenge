@@ -1,0 +1,1 @@
+The design pattern I've followed in organizing this application structure into separate modules is generally referred to as the "Modular Design Pattern" in the context of NestJS. This pattern involves dividing the application into smaller, self-contained modules that encapsulate specific features or functionality.
