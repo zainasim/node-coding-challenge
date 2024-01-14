@@ -3,7 +3,11 @@ import { InviteService } from './invite.service';
 import { InviteDocument } from './schema/invite.schema';
 import { Roles } from 'src/auth/roles.decorator';
 import { RolesGuard } from 'src/auth/roles.guard';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+
+@ApiBearerAuth()
+@ApiTags('Invite')
 @UseGuards(RolesGuard)
 @Roles('admin, client')
 @Controller('invites')

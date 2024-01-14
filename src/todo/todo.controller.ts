@@ -18,7 +18,11 @@ import { AuthGuard } from '@nestjs/passport';
 import { RolesGuard } from 'src/auth/roles.guard';
 import { Roles } from 'src/auth/roles.decorator';
 import { CurrentUser } from 'src/auth/current-user.decorator';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+
+@ApiBearerAuth()
+@ApiTags('Todo')
 @Controller('todo')
 @UseGuards(AuthGuard())
 export class TodoController {
